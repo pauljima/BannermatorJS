@@ -312,8 +312,8 @@ Bannermator.prototype.setTransforms = function(animObj, dur, easing, setFunc) {
 	// Apply changes
 	elem.style.opacity = animObj.opacity;
 
-	if (animObj.width) elem.style.width = animObj.width + "px";
-	if (animObj.height) elem.style.height = animObj.height + "px";
+	// if (animObj.width) elem.style.width = animObj.width + "px";
+	// if (animObj.height) elem.style.height = animObj.height + "px";
 
 	elem.style.WebkitTransition = dur + "s all " + easing;
 	elem.style.MozTransition = dur + "s all " + easing;
@@ -428,8 +428,8 @@ function AnimationObject() {
 	this.skewX = 0;
 	this.skewY = 0;
 
-	this.width = 0;
-	this.height = 0;
+	// this.width = 0;
+	// this.height = 0;
 	this.opacity = 1;
 
 	this.easing = "ease";
