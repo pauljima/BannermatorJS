@@ -315,11 +315,11 @@ Bannermator.prototype.setTransforms = function(animObj, dur, easing, setFunc) {
 	if (animObj.width) elem.style.width = animObj.width + "px";
 	if (animObj.height) elem.style.height = animObj.height + "px";
 
-	elem.style.WebkitTransition = dur + "s all " + easing;
-	elem.style.MozTransition = dur + "s all " + easing;
-	elem.style.msTransition = dur + "s all " + easing;
-	elem.style.OTransition = dur + "s all " + easing;
 	elem.style.transition = dur + "s all " + easing;
+	elem.style.OTransition = dur + "s all " + easing;
+	elem.style.msTransition = dur + "s all " + easing;
+	elem.style.MozTransition = dur + "s all " + easing;
+	elem.style.WebkitTransition = dur + "s all " + easing;
 
 	// elem.style.WebkitTransition = dur + "s all " + easing;
 	// elem.style.MozTransition = dur + "s all " + easing;
@@ -327,11 +327,11 @@ Bannermator.prototype.setTransforms = function(animObj, dur, easing, setFunc) {
 	// elem.style.OTransition = dur + "s all " + easing;
 	// elem.style.transition = dur + "s all " + easing;
 
-	elem.style.WebkitTransform = transforms;
-	elem.style.MozTransform = transforms;
-	elem.style.msTransform = transforms;
-	elem.style.OTransform = transforms;
 	elem.style.transform = transforms;
+	elem.style.OTransform = transforms;
+	elem.style.msTransform = transforms;
+	elem.style.MozTransform = transforms;
+	elem.style.WebkitTransform = transforms;
 
 	// console.log(animObj.opacity + " " + transforms);
 	// console.log(animObj);
