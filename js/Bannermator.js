@@ -23,6 +23,9 @@
  * delay(num)
  * @param num:Number 		- (Required) Number in seconds to specify animation delay
  * @return Manual delay between animations
+ *
+ * setEase(ease)
+ * @param ease:String		- Set default easing
  * 
  * killTimers()				- Stops all animation timers, making it possible to
  * 							  start animations from the beginning again
@@ -36,6 +39,7 @@
  */
 function Bannermator() {
 	this.timeline = 0;
+	this.defaultEase = "Linear.easeInOut";
 
 	this.animSequence = [];
 	this.curAnimSeq = 0;
@@ -58,7 +62,7 @@ function Bannermator() {
 Bannermator.prototype.to = function(elem, dur, propObj, keyframe) {
 
 	var delay = 0,
-		easing = "ease",
+		easing = this.defaultEase,
 		prop,
 
 		obj = {},
@@ -67,8 +71,6 @@ Bannermator.prototype.to = function(elem, dur, propObj, keyframe) {
 		seqObj = {},
 
 		repeatCount = 0;
-
-
 
 	/*
 	 * Init
@@ -102,6 +104,7 @@ Bannermator.prototype.to = function(elem, dur, propObj, keyframe) {
 
 	// Easing?
 	if (propObj.ease) easing = this.applyEase(propObj.ease);
+	else { easing = this.applyEase(easing); }
 
 	// Delay?
 	if (propObj.delay) delay += propObj.delay * 1000;
@@ -152,7 +155,6 @@ Bannermator.prototype.to = function(elem, dur, propObj, keyframe) {
 
 		this.timeline += (dur * repeatCount) * 1000;
 	}
-
 
 	return this;
 }
@@ -223,6 +225,10 @@ Bannermator.prototype.delay = function(num) {
 Bannermator.prototype.endAnim = function() {
 	this.drawIt(this.curAnimSeq);
 	// console.log(this.animSequence);
+}
+
+Bannermator.prototype.setEase = function(ease) {
+	this.defaultEase = ease;
 }
 
 
