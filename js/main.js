@@ -4,6 +4,8 @@ var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
 var box4 = document.getElementById("box4");
 
+anim.setEase("Quad.easeInOut");
+
 anim.set(box1, {x:500, z:250})
 	.set(box2, {x:200, y:200})
 	.set(box3, {x:200, y:200})
