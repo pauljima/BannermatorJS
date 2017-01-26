@@ -39,7 +39,11 @@
  */
 function Bannermator() {
 	this.timeline = 0;
+<<<<<<< HEAD
 	this.defaultEase = "Linear.easeInOut";
+=======
+	this.defaultEase = "ease";
+>>>>>>> a66daa534ec01b416d22f3992b44fb788e7cbf22
 
 	this.animSequence = [];
 	this.curAnimSeq = 0;
