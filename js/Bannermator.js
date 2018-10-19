@@ -423,9 +423,9 @@ function AnimationObject() {
 	this.y = 0;
 	this.z = 0;
 
-	this.rotateX = 0;
-	this.rotateY = 0;
-	this.rotateZ = 0;
+	this.rotateX = 0.001;
+	this.rotateY = 0.001;
+	this.rotateZ = 0.001;
 
 	this.scaleX = 1;
 	this.scaleY = 1;
